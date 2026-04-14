@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSMC ESG Impact</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">TSMC ESG</div>
+            <ul class="nav-menu">
+                <li><a href="#hero" onclick="scrollToSection(event)">Home</a></li>
+                <li><a href="#environmental" onclick="switchTabFromNav(event, 'environmental')">Environmental</a></li>
+                <li><a href="#social" onclick="switchTabFromNav(event, 'social')">Social</a></li>
+                <li><a href="#governance" onclick="switchTabFromNav(event, 'governance')">Governance</a></li>
+                <li><a href="#stats" onclick="scrollToSection(event)">Stats</a></li>
+                <li><a href="#dashboard" onclick="scrollToSection(event)">Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>TSMC's ESG Impact</h1>
+            <p>Driving Sustainable Semiconductor Innovation</p>
+            <button class="cta-button" onclick="document.getElementById('environmental').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview">
+        <h2>Environmental, Social & Governance Excellence</h2>
+        <p>TSMC is committed to sustainable semiconductor manufacturing through comprehensive ESG initiatives.</p>
+    </section>
+
+    <!-- ESG Tabs Section -->
+    <section id="esg-tabs" class="esg-section">
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="switchTab('environmental')">Environmental</button>
+            <button class="tab-btn" onclick="switchTab('social')">Social</button>
+            <button class="tab-btn" onclick="switchTab('governance')">Governance</button>
+        </div>
+
+        <!-- Environmental Tab -->
+        <div id="environmental" class="tab-content active">
+            <h2>Environmental Impact</h2>
+            <div class="cards-grid">
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>Carbon Neutrality Goal</h3>
+                    <p>TSMC aims for net-zero carbon emissions by 2050, with intermediate targets to reduce emissions 40% by 2030.</p>
+                    <div class="card-details" style="display:none;">
+                        <ul>
+                            <li>Renewable energy investment of $2.8 billion</li>
+                            <li>Target: 100% renewable energy by 2030</li>
+                            <li>Currently: ~33% renewable energy usage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>Water Resource Management</h3>
+                    <p>Sustainable water usage in semiconductor manufacturing with advanced recycling systems.</p>
+                    <div class="card-details" style="display:none;">
+                        <ul>
+                            <li>Reduction of water consumption by 30%</li>
+                            <li>70% water recycling rate</li>
+                            <li>First fab to achieve ISO 46001 certification</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>Waste Management</h3>
+                    <p>Comprehensive waste reduction and recycling programs across all operations.</p>
+                    <div class="card-details" style="display:none;">
+                        <ul>
+                            <li>99.2% waste recycling rate</li>
+                            <li>Zero landfill operations</li>
+                            <li>Hazardous waste properly managed</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>Renewable Energy</h3>
+                    <p>Aggressive transition to renewable energy sources across manufacturing facilities.</p>
+                    <div class="card-details" style="display:none;">
+                        <ul>
+                            <li>Solar and wind installations</li>
+                            <li>Green power purchase agreements</li>
+                            <li>Energy efficiency improvements: 3% annually</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Chart -->
+            <div class="chart-container">
+                <h3>TSMC Carbon Emissions Reduction Plan</h3>
+                <div class="progress-chart">
+                    <div class="chart-item">
+                        <span class="year">2023</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 10%;"></div>
+                        </div>
+                        <span class="value">10%</span>
+                    </div>
+                    <div class="chart-item">
+                        <span class="year">2027</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 60%;"></div>
+                        </div>
+                        <span class="value">60%</span>
+                    </div>
+                    <div class="chart-item">
+                        <span class="year">2030</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 90%;"></div>
+                        </div>
+                        <span class="value">90%</span>
+                    </div>
+                    <div class="chart-item">
+                        <span class="year">2050</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 100%;"></div>
+                        </div>
+                        <span class="value">100%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Tab -->
+        <div id="social" class="tab-content">
+            <h2>Social Impact</h2>
+            <div class="cards-grid">
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>Employee Welfare</h3>
+                    <p>Fair compensation, comprehensive benefits, and career development opportunities.</p>
+                    <div class="card-details" style="display:none;">
+                        <ul>
+                            <li>Competitive salary and benefits packages</li>
+                            <li>Professional development programs</li>
+                            <li>Employee satisfaction score: 4.2/5</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>Diversity & Inclusion</h3>
+                    <p>Building an inclusive workplace with diverse talent across all levels.</p>
+                    <div class="card-details" style="display:none;">
+                        <ul>
+                            <li>Women representation: 25% of workforce</li>
+                            <li>Women in management: 18%</li>
+                            <li>International talent: 40+ nationalities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>Community Engagement</h3>
+                    <p>Investment in local communities and social responsibility programs.</p>
+                    <div class="card-details" style="display:none;">
+                        <ul>
+                            <li>$50M+ annual community investment</li>
+                            <li>Educational partnerships and scholarships</li>
+                            <li>STEM programs for underprivileged students</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>Health & Safety</h3>
+                    <p>Comprehensive occupational health and safety practices.</p>
+                    <div class="card-details" style="display:none;">
+                        <ul>
+                            <li>TRIFR (Total Recordable Incident Frequency): 0.22</li>
+                            <li>Regular safety training programs</li>
+                            <li>Mental health support services</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Diversity Chart -->
+            <div class="chart-container">
+                <h3>Workforce Composition</h3>
+                <div class="pie-chart-container">
+                    <div class="pie-chart" id="pieChart"></div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <span class="legend-color male"></span> <span>Male: 75%</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color female"></span> <span>Female: 25%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Governance Tab -->
+        <div id="governance" class="tab-content">
+            <h2>Governance</h2>
+            <div class="cards-grid">
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>Board Composition</h3>
+                    <p>Diverse, experienced board overseeing ESG and business strategy.</p>
+                    <div class="card-details" style="display:none;">
+                        <ul>
+                            <li>Board size: 11 members</li>
+                            <li>Independent directors: 80%</li>
+                            <li>Women on board: 36%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>Ethics & Compliance</h3>
+                    <p>Strong ethical standards and comprehensive compliance programs.</p>
+                    <div class="card-details" style="display:none;">
+                        <ul>
+                            <li>Code of conduct for all employees</li>
+                            <li>Zero tolerance for corruption policy</li>
+                            <li>Whistleblower protection program</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>Supply Chain Risk</h3>
+                    <p>Responsible supply chain management aligned with ESG standards.</p>
+                    <div class="card-details" style="display:none;">
+                        <ul>
+                            <li>All suppliers must comply with CoC</li>
+                            <li>Regular supplier audits conducted</li>
+                            <li>Conflict minerals-free certification</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleCard(this)">
+                    <h3>Risk Management</h3>
+                    <p>Comprehensive risk assessment and mitigation strategies.</p>
+                    <div class="card-details" style="display:none;">
+                        <ul>
+                            <li>ESG risk integration in decision-making</li>
+                            <li>Regular risk assessments</li>
+                            <li>Cybersecurity investments: $200M+</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Governance Structure -->
+            <div class="chart-container">
+                <h3>Key Governance Metrics</h3>
+                <div class="governance-metrics">
+                    <div class="metric">
+                        <h4>Board Independence</h4>
+                        <div class="metric-bar">
+                            <div class="metric-fill" style="width: 80%;"></div>
+                        </div>
+                        <p>80%</p>
+                    </div>
+                    <div class="metric">
+                        <h4>Compliance Training</h4>
+                        <div class="metric-bar">
+                            <div class="metric-fill" style="width: 95%;"></div>
+                        </div>
+                        <p>95%</p>
+                    </div>
+                    <div class="metric">
+                        <h4>Audit Coverage</h4>
+                        <div class="metric-bar">
+                            <div class="metric-fill" style="width: 100%;"></div>
+                        </div>
+                        <p>100%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="stats-section">
+        <h2>Key ESG Metrics</h2>
+        <div class="stats-grid">
+            <div class="stat-card" onclick="animateStat(this)">
+                <div class="stat-number">2050</div>
+                <div class="stat-label">Net-Zero Target Year</div>
+            </div>
+            <div class="stat-card" onclick="animateStat(this)">
+                <div class="stat-number">90%</div>
+                <div class="stat-label">Emission Reduction by 2030</div>
+            </div>
+            <div class="stat-card" onclick="animateStat(this)">
+                <div class="stat-number">33%</div>
+                <div class="stat-label">Current Renewable Energy Usage</div>
+            </div>
+            <div class="stat-card" onclick="animateStat(this)">
+                <div class="stat-number">99.2%</div>
+                <div class="stat-label">Waste Recycling Rate</div>
+            </div>
+            <div class="stat-card" onclick="animateStat(this)">
+                <div class="stat-number">25%</div>
+                <div class="stat-label">Women in Workforce</div>
+            </div>
+            <div class="stat-card" onclick="animateStat(this)">
+                <div class="stat-number">$2.8B</div>
+                <div class="stat-label">Renewable Energy Investment</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard-section">
+        <h2>ESG Dashboard & Analytics</h2>
+        
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+            <!-- Chart 1: Annual Emissions Trend -->
+            <div class="dashboard-card">
+                <h3>Annual Emissions Trend (2020-2026)</h3>
+                <canvas id="emissionsChart"></canvas>
+                <div class="chart-info">Total CO₂ emissions in millions of metric tons</div>
+            </div>
+
+            <!-- Chart 2: Renewable Energy Growth -->
+            <div class="dashboard-card">
+                <h3>Renewable Energy Adoption</h3>
+                <canvas id="renewableChart"></canvas>
+                <div class="chart-info">Percentage of renewable energy in power mix</div>
+            </div>
+
+            <!-- Chart 3: ESG Pillar Comparison -->
+            <div class="dashboard-card">
+                <h3>ESG Score Breakdown</h3>
+                <canvas id="esgScoreChart"></canvas>
+                <div class="chart-info">Comparative scores across ESG pillars (0-100)</div>
+            </div>
+
+            <!-- Chart 4: Water Usage Reduction -->
+            <div class="dashboard-card">
+                <h3>Water Consumption Reduction</h3>
+                <canvas id="waterChart"></canvas>
+                <div class="chart-info">Water recycling rate by year (%)</div>
+            </div>
+
+            <!-- Chart 5: Workforce Diversity Trend -->
+            <div class="dashboard-card">
+                <h3>Diversity Progress (2020-2026)</h3>
+                <canvas id="diversityChart"></canvas>
+                <div class="chart-info">Women representation growth over time</div>
+            </div>
+
+            <!-- Chart 6: Investment Allocation -->
+            <div class="dashboard-card">
+                <h3>ESG Investment Allocation</h3>
+                <canvas id="investmentChart"></canvas>
+                <div class="chart-info">Distribution of $2.8B ESG investment</div>
+            </div>
+
+            <!-- Chart 7: Waste Reduction Progress -->
+            <div class="dashboard-card">
+                <h3>Waste Management Performance</h3>
+                <canvas id="wasteChart"></canvas>
+                <div class="chart-info">Waste reduction and recycling trends</div>
+            </div>
+
+            <!-- Chart 8: Energy Efficiency Improvement -->
+            <div class="dashboard-card">
+                <h3>Energy Efficiency Index</h3>
+                <canvas id="efficiencyChart"></canvas>
+                <div class="chart-info">Improvement in energy efficiency metrics</div>
+            </div>
+
+            <!-- Chart 9: SDG Alignment -->
+            <div class="dashboard-card sdg-card">
+                <h3>UN Sustainable Development Goals (SDGs) Alignment</h3>
+                <canvas id="sdgChart"></canvas>
+                <div class="chart-info">TSMC's contribution to UN SDGs (Impact Score)</div>
+            </div>
+        </div>
+
+        <!-- Metrics Summary Cards -->
+        <div class="metrics-summary">
+            <h3>Performance Metrics Summary</h3>
+            <div class="metrics-grid">
+                <div class="metric-summary-card">
+                    <div class="metric-icon">📊</div>
+                    <div class="metric-info">
+                        <h4>Carbon Intensity</h4>
+                        <p class="metric-value">45.2</p>
+                        <p class="metric-unit">tCO₂e per wafer (↓12% YoY)</p>
+                    </div>
+                </div>
+
+                <div class="metric-summary-card">
+                    <div class="metric-icon">💧</div>
+                    <div class="metric-info">
+                        <h4>Water Intensity</h4>
+                        <p class="metric-value">52.3</p>
+                        <p class="metric-unit">m³ per wafer (↓8% YoY)</p>
+                    </div>
+                </div>
+
+                <div class="metric-summary-card">
+                    <div class="metric-icon">♻️</div>
+                    <div class="metric-info">
+                        <h4>Waste Recycling Rate</h4>
+                        <p class="metric-value">99.2%</p>
+                        <p class="metric-unit">Industry-leading performance</p>
+                    </div>
+                </div>
+
+                <div class="metric-summary-card">
+                    <div class="metric-icon">👥</div>
+                    <div class="metric-info">
+                        <h4>Employee Retention</h4>
+                        <p class="metric-value">92%</p>
+                        <p class="metric-unit">Voluntary retention rate</p>
+                    </div>
+                </div>
+
+                <div class="metric-summary-card">
+                    <div class="metric-icon">🏆</div>
+                    <div class="metric-info">
+                        <h4>ESG Rating</h4>
+                        <p class="metric-value">A</p>
+                        <p class="metric-unit">MSCI ESG Rating</p>
+                    </div>
+                </div>
+
+                <div class="metric-summary-card">
+                    <div class="metric-icon">⚙️</div>
+                    <div class="metric-info">
+                        <h4>Manufacturing Safety</h4>
+                        <p class="metric-value">0.22</p>
+                        <p class="metric-unit">TRIFR (Total Recordable Incident)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Achievements Timeline -->
+        <div class="timeline-section">
+            <h3>ESG Milestones & Achievements</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h4>ESG strategy foundation</h4>
+                        <p>Established comprehensive ESG framework and targets</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-content">
+                        <h4>Carbon neutrality commitment</h4>
+                        <p>Announced net-zero emissions goal by 2050</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h4>$2.8B renewable investment</h4>
+                        <p>Major renewable energy infrastructure deployment</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h4>Water recycling milestone</h4>
+                        <p>Achieved 70% water recycling rate certification</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h4>Diversity leadership</h4>
+                        <p>25% women in workforce, 18% in management</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2026</div>
+                    <div class="timeline-content">
+                        <h4>Industry recognition</h4>
+                        <p>Achieved A rating in MSCI ESG assessment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 TSMC ESG Initiative</p>
+            <p>Committed to Sustainable Semiconductor Manufacturing</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
