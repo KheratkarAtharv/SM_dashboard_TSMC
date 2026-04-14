@@ -57,6 +57,7 @@ body {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #0052CC 0%, #003D99 50%, #00A86B 100%);
+    background-image: url('tsmc_photo.avif');
     text-align: center;
     padding: 8rem 2rem;
     color: white;
